@@ -1,0 +1,43 @@
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+.navbar {
+    background: #1C8AEF;
+    border: black;
+    width: 98vw;
+    height: 9vh;
+    padding-bottom: 2.8vh;
+    padding-top: 1vh;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+img {
+    height: 100%;
+}
+.bi {
+    height: 100%;
+}
+.linkset {
+    height: 100%;
+}
+.link {
+    color: black;
+    font-size: 9vh;
+}
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
