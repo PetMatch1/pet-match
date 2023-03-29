@@ -1,6 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
-* {
-    font-family: "Inter";
-    margin: 0;
-    overflow: hidden;
+@font-face {
+    font-family: Gilroy-Bold;
+    src: url('assets/gilroy/Gilroy-Bold.ttf') format('truetype');
 }
+* {
+    font-family: Gilroy-Bold;
+}
+.text-responsive {
+    font-size: calc(100% + 1vw + 1vh);
+  }
