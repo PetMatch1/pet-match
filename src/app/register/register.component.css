@@ -1,0 +1,23 @@
+body {
+    background-color: #6FFFE9;
+    min-height: 90vh;
+}
+.row {
+    display: flex;
+}
+.dogPic {
+    margin: 0;
+    height: 88vh;
+    display: block;
+    margin-left: auto;
+}
+.registerBox {
+    height: 80vh;
+    padding-bottom: 5vh;
+}
+* {
+    font-size: 3vh;
+}
+.column {
+flex: 50%;
+}
