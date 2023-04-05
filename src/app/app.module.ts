@@ -10,6 +10,7 @@ import { StoreComponent } from './store/store.component';
 import { ProfileComponent } from './profile/profile.component';
 import { RegisterComponent } from './register/register.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ProductViewComponent } from './product-view/product-view.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     SearchComponent,
     StoreComponent,
     ProfileComponent,
-    RegisterComponent
+    RegisterComponent,
+    ProductViewComponent
   ],
   imports: [
     BrowserModule,

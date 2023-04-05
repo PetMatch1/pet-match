@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent {
-
+  Dogs: Dog[] = [
+    'Bulldog',
+    'Poodle',
+    'Labrador Retriever',
+    'German Shepherd',
+    
+  ]
 }
