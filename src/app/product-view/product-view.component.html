@@ -1,5 +1,12 @@
 <ul class="products">
     <li *ngFor="let product of products">
-        <h3>{{ product }}</h3>
+        <div style="background-color:#FFFFFF" class="rounded-3">
+            <img src="{{product.Photo}}" alt="{{product.Name}}" width="264px" height="264px">
+            <div>
+                <div>{{product.Name}} - {{product.Breed}}</div>
+                <div class="smaller">Gene: {{product.Gender}} • Age: {{product.Age}}</div>
+                <div>Price: {{product.Price}}</div>
+            </div>
+        </div>
     </li>
 </ul>

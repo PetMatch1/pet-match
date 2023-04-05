@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Dogs } from '../dogs-sample';
+import { Listing } from '../datatypes';
 
 @Component({
   selector: 'app-product-view',
@@ -7,5 +8,5 @@ import { Dogs } from '../dogs-sample';
   styleUrls: ['./product-view.component.css']
 })
 export class ProductViewComponent {
-  @Input() products: String[] = [];
+  @Input() products: Listing[] = [];
 }
