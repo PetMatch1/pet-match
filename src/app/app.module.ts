@@ -10,9 +10,9 @@ import { StoreComponent } from './store/store.component';
 import { ProfileComponent } from './profile/profile.component';
 import { RegisterComponent } from './register/register.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ProductViewComponent } from './product-view/product-view.component';
 import { LogoutButtonComponent } from './logout-button/logout-button.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +22,7 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
     StoreComponent,
     ProfileComponent,
     RegisterComponent,
+    ProductViewComponent,
     LogoutButtonComponent,
     UserProfileComponent
   ],
