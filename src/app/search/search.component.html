@@ -1,2 +1,10 @@
 <app-toolbar></app-toolbar>
-<app-product-view [products]='Dogs'></app-product-view>
+<div class="container">
+    <div class="row">
+        <div class="col-2">
+            <app-dog-filter></app-dog-filter>
+        </div>
+        <div class="col-2">
+            <app-product-view [products]='Dogs'></app-product-view>
+        </div>
+</div>

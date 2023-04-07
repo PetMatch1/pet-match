@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { Dogs } from '../dogs-sample';
 import { Listing } from '../datatypes';
 
 @Component({
