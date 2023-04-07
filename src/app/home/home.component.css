@@ -2,6 +2,7 @@
     background-image: url(../../assets/background/TopHome.resized.png);
     height: 100vh;
     background-repeat: no-repeat;
+    background-size: auto;
 }
 .container2 {
     background-image: url(../../assets/background/BreedHome.resized.png);
