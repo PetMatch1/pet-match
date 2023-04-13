@@ -1,14 +1,32 @@
+.container-wrapper {
+    display: flex;
+    flex-wrap:nowrap;
+  }
+
 .container {
-    background-image: url(../../assets/background/TopHome.resized.png);
+    background-image: url(../../assets/background/TopHome.png);
     height: 100vh;
+    width:4000px;
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size:auto;
 }
 .container2 {
     background-image: url(../../assets/background/BreedHome.resized.png);
     height: 60vh;
+    width: 100%;
     background-repeat: no-repeat;
-    background-position: center
+    background-position:top;
+    margin-top: -350px;
+    background-size:auto;
+}
+.container3 {
+  background-color: #ffffff;
+  height: 50vh;
+  width: 1200px;
+  margin-top: -150px;
+  margin-left: 45px;
+  padding: 20px;
+  box-sizing: border-box;
 }
 span {
     display: inline-block;
