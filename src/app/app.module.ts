@@ -13,6 +13,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProductViewComponent } from './product-view/product-view.component';
 import { LogoutButtonComponent } from './logout-button/logout-button.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
+import { DogFilterComponent } from './dog-filter/dog-filter.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +25,8 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
     RegisterComponent,
     ProductViewComponent,
     LogoutButtonComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    DogFilterComponent
   ],
   imports: [
     BrowserModule,
