@@ -7,12 +7,12 @@ import { ProfileComponent } from './profile/profile.component';
 import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
-    { path: '', component: HomeComponent },
-    { path: 'home', component: HomeComponent },
+    { path: '', component: HomeComponent },
+    { path: 'home', component: HomeComponent },
     { path: 'search', component: SearchComponent},
     { path: 'store', component:StoreComponent},
-    {path: 'profile', component:ProfileComponent},
-    {path: 'register', component:RegisterComponent}
+    { path: 'profile', component:ProfileComponent},
+    { path: 'register', component:RegisterComponent}
 
   ];
 

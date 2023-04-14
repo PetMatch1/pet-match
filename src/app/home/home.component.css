@@ -31,3 +31,53 @@
 span {
     display: inline-block;
 }
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.smaller {
+  font-size: 0.8em;
+}
+.container3 p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+.card {
+  margin-bottom: 2rem;
+}
+
+.card-img-top {
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+  padding: 10px;
+  background-color: #fff;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.card-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gender {
+  margin-right: 7px;
+}
+.price-text {
+  margin-top: -20px;
+}
+.clickable-card:hover {
+  cursor: pointer;
+  border: 2px solid #007bff;
+}
