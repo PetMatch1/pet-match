@@ -1,4 +1,5 @@
 var user = require('pet-match/models/user');
+var bodyparser = require('body-parser');
 const handler = async (event) => {
     var mongoose = require('mongoose');
     mongoose.set("strictQuery", false);
