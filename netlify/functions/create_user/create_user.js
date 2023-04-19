@@ -1,14 +1,16 @@
-var user = require('pet-match/models/user');
+var User = require('../../../models/user');
 var bodyparser = require('body-parser');
 const handler = async (event) => {
+    console.log(event.body);
     var mongoose = require('mongoose');
     mongoose.set("strictQuery", false);
-    const dbURI = "mongodb+srv://njf9:Solinski712!@cluster0.8dujphq.mongodb.net/PetMatch?retryWrites=true&w=majority";
+    const dbURI = process.env.API_KEY;
     async function main() {
         await mongoose.connect(dbURI);
     }
     main().catch(err => console.log(err));
     const formData = event.body;
+    console.log(formData.name);
     const userdetail = {
         name: formData.name,
         email: formData.email,
