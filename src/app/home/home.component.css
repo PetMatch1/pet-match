@@ -4,6 +4,7 @@
   }
 
 .container {
+    position: relative;
     background-image: url(../../assets/background/TopHome.png);
     height: 100vh;
     width:4000px;
@@ -43,6 +44,7 @@ ul {
   font-size: 1.2rem;
   font-weight: 500;
   margin-bottom: 2rem;
+  
 }
 .card {
   margin-bottom: 2rem;
@@ -80,4 +82,71 @@ ul {
 .clickable-card:hover {
   cursor: pointer;
   border: 2px solid #007bff;
+}
+.container4 {
+  position: relative; /* Set the container to relative positioning */
+}
+
+.text-container {
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  transform: translate(-0%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.text-container h1 {
+  font-size: 55px;
+  font-weight: bold;
+  margin: 0;
+  color: #003459;
+
+}
+
+.text-container h2 {
+  font-size: 37px;
+  margin: 20px 0;
+  color: #003459;
+
+}
+
+.text-container p {
+  font-size: 15px;
+  line-height: 1.5;
+  max-width: 500px;
+  margin: 0 auto;
+  color: #242B33;
+}
+.container4 button {
+  background-color: #003459;
+  color: #fdfdfd;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-weight: normal;
+}
+.container5 {
+  background-color: #ffffff;
+  height: 50vh;
+  width: 1200px;
+  margin-top: 10px;
+  margin-left: -22px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.container5 p {
+  color: #003459;
+}
+.container3 h2 {
+  font-size: 20px; /* or any desired size */
+}
+.container5 h2 {
+  font-size: 20px; /* or any desired size */
+}
+
+.text-wrapper p {
+  font-size: 32px; /* or any desired size */
 }
