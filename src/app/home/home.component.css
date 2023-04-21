@@ -137,8 +137,9 @@ ul {
   padding: 20px;
   box-sizing: border-box;
 }
-.container5 p {
+.our-products {
   color: #003459;
+  font-size: 37px;
 }
 .container3 h2 {
   font-size: 20px; /* or any desired size */
@@ -149,4 +150,70 @@ ul {
 
 .text-wrapper p {
   font-size: 32px; /* or any desired size */
+}
+.container6 {
+  height: 200px; /* Set the height of the container */
+}
+
+.pet-sellers {
+  font-size: 33px;
+  color: #003459;
+  margin-left: 5px;
+}
+.image-container {
+  display: flex;
+  justify-content: center;
+  height: 200px;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: -60px;
+  margin-bottom: 100px;
+}
+
+.image-container img {
+  margin: 0 50px; /* add spacing between images */
+  height: 60%;
+}
+.container7 p {
+  font-size: 20px;
+  margin-right:100px;
+}
+.container7 h3 {
+  margin-top: -25px;
+  color: #003459;
+}
+.container7{
+  max-width: 1200px;
+}
+.card-knowledge {
+  width: 1200px;
+  height: 470px;
+  margin: 10px;
+}
+
+.card-knowledge img {
+  height: 300px;
+  object-fit: cover;
+}
+
+.card-knowledge .card-body {
+  background-color: #ffffff;
+  border-radius: 10px;
+  color: rgb(0, 0, 0);
+  margin-top: -10px;
+  margin-bottom: 100px;
+  padding: 10px;
+}
+.card-body .Title-Text {
+  font-size: 17px;
+  width: 350px;
+  font-family: 'Gilroy';
+  font-weight: 300; 
+  
+  font-style:Bold;
+}
+.card-body .Info-Text {
+  font-size: 15px;
+  width: 350px;
+  margin-top: -20px;
 }
