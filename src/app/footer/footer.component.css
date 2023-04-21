@@ -1,0 +1,30 @@
+footer{
+    margin-top: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #00000093;
+    margin-bottom: 30px;
+}
+.link {
+    margin-right: 60px;
+    font-size: 17px; /* add margin-right to create space between each link */
+    outline: none;
+    text-decoration: none;
+    color: black;
+  }
+  .footer-image {
+    max-width: 100%;
+    height: auto;
+    margin-left: 20px;
+  }
+  .bottom {
+    margin-left: 50px;
+    bottom: -100px;
+  }
+  .outside-image {
+    display: block;
+    height:100px;
+    margin: auto;
+  }

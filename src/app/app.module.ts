@@ -14,6 +14,7 @@ import { ProductViewComponent } from './product-view/product-view.component';
 import { LogoutButtonComponent } from './logout-button/logout-button.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { DogFilterComponent } from './dog-filter/dog-filter.component';
+import { FooterComponent } from './footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +27,8 @@ import { DogFilterComponent } from './dog-filter/dog-filter.component';
     ProductViewComponent,
     LogoutButtonComponent,
     UserProfileComponent,
-    DogFilterComponent
+    DogFilterComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
