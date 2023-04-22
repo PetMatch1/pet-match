@@ -21,7 +21,7 @@
         <h2 class="">Unsure of the Breed</h2>
         <span class="text-wrap" style="width:30%;">Are you tired of guessing your pet's breed? Look no further! Our cutting-edge AI technology can accurately determine your pet's breed with just a few simple clicks. With a database of over 250 breeds, our AI can identify even the most obscure breeds.</span>
         <br>
-        <button class="rounded-3 p-2 mt-3" style="background-color:white" type="submit">Explore now</button>
+        <button class="rounded-3 p-2 mt-3" style="background-color:white" type="submit" (click)="open(content)">Explore Now</button>
     </div>
 </div>
 <div class="container3">
@@ -325,6 +325,28 @@
       </div>
     </div>
     <app-footer></app-footer>
+
+    <ng-template #content let-modal>
+        <div class="modal-header">
+          <h4 class="modal-title" id="modal-basic-title">Upload Image</h4>
+          <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="imageUpload">Select an image to upload:</label>
+              <input type="file" class="form-control-file" id="imageUpload" (change)="onFileSelected($event)">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" (click)="modal.dismiss('cancel')">Cancel</button>
+          <button type="button" class="btn btn-primary" [disabled]="!selectedFile" (click)="upload()">Upload</button>
+        </div>
+      </ng-template>
+      
 </div>
 
 
