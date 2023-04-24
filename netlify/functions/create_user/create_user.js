@@ -1,5 +1,4 @@
 var User = require('../../../models/user');
-var express = require('express');
 
 const handler = async (event) => {
     var mongoose = require('mongoose');
@@ -10,15 +9,15 @@ const handler = async (event) => {
     } catch (err) {
         console.log(err);
     };
-    const formData = JSON.parse(event.body);
+    const formData = new URLSearchParams(event.body);
     const userdetail = {
-        name: formData.name,
-        email: formData.email,
-        phone_num: formData.phone_num || null,
-        bio: formData.bio || null
+        name: formData.get("name"),
+        email: formData.get("email"),
+        phone_num: formData.get("phone_num"),
+        bio: formData.get("bio")
     };
     var response;
-    await User.create(userdetail).then(function(user) {
+    await User.create(userdetail).then(function() {
         response = {
             statusCode: 200,
             body: "New User Inserted!"
@@ -27,7 +26,7 @@ const handler = async (event) => {
     .catch(function(err) {
         response = {
             statusCode: 500,
-            body: err.toString
+            body: err.toString()
         };
     });
     return response;

@@ -18,16 +18,18 @@ const listingSchema = new Schema({
     gender: {
         type: String,
         enum: ['Male', 'Female'],
-        default: 'Male',
         required: true
     },
     isActive: {type: Boolean},
-    startDate: {type: Date, default: Date.now},
+    startDate: {type: Date},
     endDate: {type: Date},
     traitList: [String],
-    isBid: {type: Boolean },
-    bid_list: [Schema.Types.ObjectId],
-    zipcode: {type: Number} ,
+    isBid: {type: Boolean, default: false},
+    bid_list: {
+        type: [Schema.Types.ObjectId],
+        default: []    
+    },
+    zipcode: {type: Number},
 });
 
 listingSchema.virtual("url").get(function () {
