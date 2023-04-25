@@ -25,12 +25,13 @@ const handler = async (event) => {
         name: formData.get("name"),
         age: formData.get("age"),
         breed: formData.get("breed"),
+        breed_size: formData.get("breed_size"),
         color: formData.get("color"),
         gender: formData.get("gender"),
         isActive: active,
         startDate: start,
         endDate: formData.get("endDate"),
-        traitList: formData.get("traitList") || [null],
+        traitList: formData.getAll("traitList") || [null],
         zipcode: formData.get("zipCode")
     };
     var response;

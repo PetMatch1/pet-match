@@ -10,6 +10,11 @@ const listingSchema = new Schema({
     name: {type:String, required: true},
     age: {type: Number, required: true},
     breed: {type: String, required: true},
+    breed_size: {
+        type: String,
+        required: true,
+        enum: ["Small", "Medium", "Large"]
+    },
     color: {
         type: String, 
         required: true,
