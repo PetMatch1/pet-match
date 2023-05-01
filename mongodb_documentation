@@ -1,0 +1,51 @@
+In MongoDB, a Schema is only determined by the App Services, and the application that is created and hosted on MongoDB Atlas. We will be using the GraphQL endpoint provided by MongoDB Atlas for all database CRUD operations. 
+
+PetMatch has 4 database tables
+bids
+listings
+ratings
+Users
+
+Glossary: 
+ObjectID_ is a given data type within mongodb that is automatically generated when any new document is created, it is a mandatory and unique identifier for each document in any database table. _id is the automatically generated ObjectID for every document.
+
+Bids – contains all bids done by all users
+–It requires items: listing_id, bid_value and user_id
+Listing_id: ObjectID of the Listing the individual bid belongs to
+User_id: ObjectID of user placing the Bid
+Bid_value: value
+Status: it is a string that accepts only two statuses as “enum”, to show if the bid is the highest in the listing or is outbid. By default, it is the highest bid unless told otherwise
+
+Listings
+-Requires: seller_id, price, name, age, breed, gender
+Seller_id: the ObjectID of the user making the listing (seller)
+Price: the price set by the seller (starting price for bidding enabled listing)
+Name: name of pet
+Age: pet age
+Breed: pet breed
+Gender: pet gender
+isActive: is this listing active?
+startDate: the date this listing was added to the database.
+endDate: seller set date to end the listing
+traitList: an array of traits that the seller can add about their pet
+isBid: is this a bid or a sell?
+Bid_list: is bid, this list saves all bid_ID belonging to this listing.
+Zipcode: a 5 int digit value of the location on where this is. 
+
+Ratings:
+Requires: rater_id, rated_id, rating
+Rater_id– giver of rating
+Rated_id–user given the rating
+Rating– value of rating
+Users:
+Requires: name, email
+Name– username
+Email – registered email
+Phone_num – phone number
+Favorites – A list of ListingIDs that a user would like to use
+Ratings– an aggregate rating on users that contains an array of object rating which is made of the rating and the value
+User_ratings– the value of ratings from other customers
+Listings– array of Petmatch Listings that belongs to this user
+Bids– array of bids that belongs to this user
+Seller_rating– rating as a seller
+Bio – biography written by user
