@@ -11,6 +11,7 @@ const handler = async (event) => {
     };
     var response;
     var searchFilters = new URLSearchParams(event.body);
+    console.log(event.getAll)
     var genders = ["Male", "Female"];
     var colors = ["Red", "Apricot", "Black", "Black & White", "Silver", "Tan"];
     var breeds = ["Small", "Medium", "Large"];
@@ -31,7 +32,6 @@ const handler = async (event) => {
     if(searchFilters.get("maxPrice") != null && searchFilters.get("maxPrice") >= minPrice) {
         maxPrice = searchFilters.get("maxPrice");
     };
-    console.log(colors);
     await Listing.find()
     .in("gender", genders)
     .in("color", colors)
