@@ -1,21 +1,35 @@
+import { Time } from "@angular/common";
+
 export class Location {
     Coordinates: number[] = [];
     Type: string = "";
 }
-export class Listing {
-    Age: number = 0;
-    Gender: string = "";
-    Breed: string = "";
-    Location?: Location = new Location();
-    Name: string = "";
-    Photo: string[] = [];
-    Price: number = 0;
-    TraitList?: string[] = [];
-    UserID?: string = "";
-    id?: string = "";
-    isActive?: boolean = false;
-    isBid?: boolean = false;
-    isTimed?: boolean = false;
-    startDate?: Date = new Date();
 
+export class Bid {
+}
+
+export class Listing {
+    _id: string = "";
+    seller: string = "";
+    price: number = 0;
+    name: string = "";
+    age: number = 0;
+    breed: string = "";
+    breed_size: string = "";
+    color: string = "";
+    gender: string = "";
+    isActive: boolean = false;
+    startDate: string = "";
+    endDate: string = "";
+    traitList: string[] = [];
+    isBid: boolean = false;
+    bid_list: Bid[] = [];
+    zipcode: string = "";
+    photo: string = "";
+}
+
+export class getResponse {
+    statusCode: number = 0;
+    headers: Object = {};
+    body: string = "";
 }

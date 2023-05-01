@@ -50,7 +50,13 @@ const handler = async (event) => {
             body: err.toString
         }
     });
-    return response;
+    return {
+        statusCode: 200,
+        headers: {
+            "Access-Control-Allow-Origin": "*", // Allow from anywhere 
+        },
+        body: JSON.stringify(response)
+    }
 }
 
 module.exports = { handler }
