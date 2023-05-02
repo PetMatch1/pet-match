@@ -1,11 +1,11 @@
 <ul class="products list-group list-group-horizontal">
     <li *ngFor="let product of products" class="m-5">
         <div style="background-color:#FFFFFF" class="rounded-3">
-            <img src="{{product.Photo}}" alt="{{product.Name}}" width="264px" height="264px">
+            <img src="{{product.photo}}" alt="{{product.name}}" width="264px" height="264px">
             <div>
-                <div>{{product.Name}} - {{product.Breed}}</div>
-                <div class="smaller">Gene: {{product.Gender}} • Age: {{product.Age}}</div>
-                <div>Price: {{product.Price}}</div>
+                <div>{{product.name}} - {{product.breed}}</div>
+                <div class="smaller">Gene: {{product.gender}} • Age: {{product.age}}</div>
+                <div>Price: {{product.price}}</div>
             </div>
         </div>
     </li>
