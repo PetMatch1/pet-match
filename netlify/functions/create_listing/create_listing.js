@@ -10,7 +10,7 @@ const handler = async (event) => {
     } catch (err) {
         console.log(err);
     };
-    const formData = new URLSearchParams(event.body);
+    const formData = new URLSearchParams(event.queryStringParameters);
     var start;
     if(formData.get("startDate") == null) {
         var active = true;

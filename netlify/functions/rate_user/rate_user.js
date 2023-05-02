@@ -10,7 +10,7 @@ const handler = async (event) => {
     } catch (err) {
         console.log(err);
     };
-    const formData = new URLSearchParams(event.body);
+    const formData = new URLSearchParams(event.queryStringParameters);
     const rating_detail = {
        rated_id: formData.get("rated_id"),
        rater_id: formData.get("rater_id"),

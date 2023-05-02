@@ -9,7 +9,7 @@ const handler = async (event) => {
     } catch (err) {
         console.log(err);
     };
-    const formData = new URLSearchParams(event.body);
+    const formData = new URLSearchParams(event.queryStringParameters);
     const userdetail = {
         name: formData.get("name"),
         email: formData.get("email"),

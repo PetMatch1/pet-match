@@ -11,7 +11,7 @@ const handler = async (event) => {
     } catch (err) {
         console.log(err);
     };
-    const formData = new URLSearchParams(event.body);
+    const formData = new URLSearchParams(event.queryStringParameters);
     const bid_detail = {
         listing_id: formData.get("listing_id"),
         bid_value: formData.get("bid_value"),
