@@ -10,7 +10,7 @@
             <h2>Cost: {{this.listing.price}}</h2>
             <button class="text-white rounded-3 p-2 listing-button" style="background-color:#003459;" type="submit">Contact us</button>
             <br>
-            <button class="text-white rounded-3 p-2 listing-button" style="background-color:#003459;" type="submit">{{auctionOrBuy(this.listing)}}</button>
+            <button class="text-white rounded-3 p-2 listing-button" style="background-color:#003459;" type="submit" (click)="buy(this.listing)">{{auctionOrBuy(this.listing)}}</button>
             <div class="container adj-list" style="color:gray;">
                 <div class="row">
                     <div class="col">

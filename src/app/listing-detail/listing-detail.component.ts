@@ -41,6 +41,9 @@ export class ListingDetailComponent {
       return "Buy Now"
     }
   }
+  buy (listing: Listing){
+    window.alert(`You have purchased ${listing.name} for $${listing.price}!`)
+  }
   ngOnInit() {
     this.route.queryParams.subscribe(params => {
         let idObject = {
@@ -53,5 +56,5 @@ export class ListingDetailComponent {
         })
 
     })
-}
+  }
 }
