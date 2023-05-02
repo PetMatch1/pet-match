@@ -10,8 +10,7 @@ const handler = async (event) => {
         console.log(err);
     };
     var response;
-    var searchFilters = new URLSearchParams(event.body);
-    console.log(event.getAll)
+    var searchFilters = new URLSearchParams(event.queryStringParameters);
     var genders = ["Male", "Female"];
     var colors = ["Red", "Apricot", "Black", "Black & White", "Silver", "Tan"];
     var breeds = ["Small", "Medium", "Large"];

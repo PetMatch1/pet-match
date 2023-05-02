@@ -12,8 +12,8 @@ import { Output, EventEmitter } from '@angular/core';
 export class DogFilterComponent {
   constructor( private elRef:ElementRef, private http: HttpClient) {  }
   @Output() newItemEvent = new EventEmitter<string>();
-  sendFilter(value: string, minPrice: number, maxPrice: number) {
-    this.newItemEvent.emit(JSON.stringify([value, minPrice, maxPrice]));
+  sendFilter(value: string) {
+    this.newItemEvent.emit(JSON.stringify(value));
   }
   onChange() {
     let filter, value: string;
@@ -30,14 +30,14 @@ export class DogFilterComponent {
     }
     let minPrice = this.elRef.nativeElement.querySelector("#_minPrice").value
     let maxPrice = this.elRef.nativeElement.querySelector("#_maxPrice").value
-    if (minPrice == ""){
-      minPrice = "0"
+    if (minPrice != ""){
+      filters["minPrice"] = [minPrice]
     }
     minPrice = parseFloat(minPrice)
-    if (maxPrice == ""){
-      maxPrice = "1e100"
+    if (maxPrice != ""){
+      filters["maxPrice"] = [maxPrice]
     }
     maxPrice = parseFloat(maxPrice)
-    this.sendFilter(JSON.stringify(filters), minPrice, maxPrice)
+    this.sendFilter(JSON.stringify(filters))
   }
 }
