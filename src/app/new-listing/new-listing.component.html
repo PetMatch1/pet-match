@@ -1,0 +1,69 @@
+<app-toolbar></app-toolbar>
+<div class="container">
+    <form action="/.netlify/functions/create_listing">
+        <div class="row">
+            <div class="col-6">
+                <input type="file" id="photo" name="photo">
+            </div>
+            <div class="col-5">
+                <input class="h1" id="name" name="name" placeholder="Name">
+                <input class="h2" id="breed" name="breed" placeholder="Breed">
+                <input class="h2" type="number" id="price" name="price" placeholder="Price">
+                <br>
+                <label for="isBid" class="h2">
+                    <button class="text-white rounded-3 p-2 listing-button" (click) = "swapButton()" style="background-color:#003459;">{{buttonText}}</button>
+                </label>
+                <input type="checkbox" id="isBid" name="isBid" class="hidden">
+                <div class="container adj-list" style="color:gray;">
+                    <div class="row">
+                        <div class="col">
+                            Gender
+                        </div>
+                        <div class="col">
+                            <select id="gender" name="gender" placeholder="Gender">
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            Age
+                        </div>
+                        <div class="col">
+                            <input id="age" type="number" name="age" placeholder="Age">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            Size
+                        </div>
+                        <div class="col">
+                            <select id="breed_size" name = "breed_size" placeholder="Size">
+                                <option value="Small">Small</option>
+                                <option value="Medium">Medium</option>
+                                <option value="Large">Large</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            Color
+                        </div>
+                        <div class="col">
+                            <select id="color" name="color" placeholder="Color">
+                                <option value="Red">Red</option>
+                                <option value="Apricot">Apricot</option>
+                                <option value="Black">Black</option>
+                                <option value="Black & White">Black & White</option>
+                                <option value="Silver">Silver</option>
+                                <option value="Tan">Tan</option>
+                            </select>
+                        </div>
+                        <input type="submit" value="Create Listing" class="text-white rounded-3 p-2 listing-button" style="background-color:#003459;height:150%">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
