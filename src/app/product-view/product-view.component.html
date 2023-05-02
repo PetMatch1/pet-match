@@ -1,14 +1,9 @@
-<ul class="products list-group list-group-horizontal">
-    <li *ngFor="let product of products" class="m-5">
-        <a href="listing?id={{product._id}}">
-            <div style="background-color:#FFFFFF" class="rounded-3">
-                <img src="{{product.photo}}" alt="{{product.name}}" width="264px" height="264px">
-                <div>
-                    <div>{{product.name}} - {{product.breed}}</div>
-                    <div class="smaller">Gene: {{product.gender}} • Age: {{product.age}}</div>
-                    <div>Price: {{product.price}}</div>
-                </div>
+<div class="products list-group list-group-horizontal container">
+    <div *ngFor="let product of products; let i = index">
+        <div *ngIf="i % ceil(products.length/3) == 0" class="row m-5" >
+            <div *ngFor="let item of [].constructor(ceil(products.length/3)); let j = index">
+                <div class="col" *ngIf="i + j < products.length"><app-product [product]="products[i + j]"></app-product></div>
             </div>
-        </a>
-    </li>
-</ul>
+        </div>
+    </div>
+</div>

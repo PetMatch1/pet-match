@@ -8,4 +8,8 @@ import { Listing } from '../datatypes';
 })
 export class ProductViewComponent {
   @Input() products: Listing[] = [];
+  length: Number = 0;
+  ceil(num: Number) {
+    return Math.ceil(Number(num));
+  }
 }
