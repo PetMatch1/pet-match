@@ -17,13 +17,13 @@ const handler = async (event) => {
     var minPrice = 0;
     var maxPrice = Number.MAX_VALUE;
     if(searchFilters.get("gender") != null) {
-        genders = searchFilters.getAll("gender");
+        genders = searchFilters.getAll("gender")[0].split(', ');
     };
     if(searchFilters.get("color") != null) {
-        colors = searchFilters.getAll("color");
+        colors = searchFilters.getAll("color")[0].split(', ');
     };
     if(searchFilters.get("breed") != null) {
-        breeds = searchFilters.getAll("breed");
+        breeds = searchFilters.getAll("breed")[0].split(', ');
     };
     if(searchFilters.get("minPrice") != null && searchFilters.get("minPrice") >= 0) {
         minPrice = searchFilters.get("minPrice");
