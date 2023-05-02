@@ -31,11 +31,15 @@ const handler = async (event) => {
     if(searchFilters.get("maxPrice") != null && searchFilters.get("maxPrice") >= minPrice) {
         maxPrice = searchFilters.get("maxPrice");
     };
+    if (searchFilters.get("id") != null) {
+        id = searchFilters.get("id");
+    }
     await Listing.find()
     .in("gender", genders)
     .in("color", colors)
     .in("breed_size", breeds)
     .where("price").gte(minPrice).lte(maxPrice)
+    .where("id").equals(id)
     .exec().then(function(listings) {
         console.log(listings);
         response = {
