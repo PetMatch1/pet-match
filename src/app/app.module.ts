@@ -19,6 +19,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { FilterComponent } from './filter/filter.component';
 import { PetStoreProductsComponent } from './pet-store-products/pet-store-products.component';
 import { ProductComponent } from './product/product.component';
+import { ListingDetailComponent } from './listing-detail/listing-detail.component';
+import { NewListingComponent } from './new-listing/new-listing.component';
+import { UpdateListingComponent } from './update-listing/update-listing.component';
 
 
 @NgModule({
@@ -35,6 +38,13 @@ import { ProductComponent } from './product/product.component';
     UserProfileComponent,
     DogFilterComponent,
     FooterComponent,
+    ProductComponent,
+    ListingDetailComponent,
+    NewListingComponent,
+    UpdateListingComponent,
+    FilterComponent,
+    PetStoreProductsComponent,
+    ProductComponent,
     FilterComponent,
     PetStoreProductsComponent,
     ProductComponent

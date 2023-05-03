@@ -22,4 +22,8 @@ export class ConfigService {
     });
     return this.http.get<getResponse>(url)
   }
+  public deleteListing(id: string) {
+    let url: string = location.origin + '/.netlify/functions/delete_listing?id=' + id
+    return this.http.get<getResponse>(url)
+  }
 }
