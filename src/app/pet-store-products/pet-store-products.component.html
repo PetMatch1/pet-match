@@ -6,7 +6,7 @@
           <h5 class="card-title">{{product.name}} - {{product.breed}}</h5>
           <p class="card-text smaller">Product: {{product.gender}} • Size: {{product.age}}</p>
           <p class="card-text">Price: {{product.price}}</p>
-          <button class="btn btn-primary buy-button">Buy</button>
+          <button class="btn btn-primary buy-button" (click)="purchaseProduct(product)">Buy</button>
         </div>
       </div>
     </div>

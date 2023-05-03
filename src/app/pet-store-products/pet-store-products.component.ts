@@ -8,4 +8,8 @@ import { Listing } from '../datatypes';
 })
 export class PetStoreProductsComponent {
   @Input() products: Listing[] = [];
+
+  purchaseProduct(product: any) {
+    window.alert(`You have purchased ${product.name} for ${product.price}.`);
+  }
 }
