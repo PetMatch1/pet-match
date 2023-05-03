@@ -9,6 +9,7 @@ import { AuthService } from '@auth0/auth0-angular';
 export class NewListingComponent {
   constructor(public auth: AuthService) {}
   buttonText: String = "Sell"
+  userId: String | undefined = ""
   swapButton() {
     if (this.buttonText == "Sell"){
       this.buttonText = "Auction"
@@ -18,7 +19,10 @@ export class NewListingComponent {
   }
   ngOnInit() {
     this.auth.user$.subscribe(user => {
-      console.log(user)
+      if (user == undefined) {
+        window.alert("Please login to create a listing")
+      }
+      this.userId = user?.sub
     })
   }
 }

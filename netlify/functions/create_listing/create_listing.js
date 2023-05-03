@@ -36,9 +36,7 @@ const handler = async (event) => {
     };
     var response;
     await Listing.create(listing_detail).then(async function(listing) {
-        const doc = await User.findById(listing.seller);
-        doc.listings.push(listing._id);
-        return doc.save();
+        return listing.save();
     })
     .then(function(user) {
         response = {
