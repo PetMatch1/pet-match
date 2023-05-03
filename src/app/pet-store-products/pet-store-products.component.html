@@ -1,11 +1,11 @@
 <div class="row row-cols-1 row-cols-md-3 g-4">
     <div *ngFor="let product of products" class="col">
       <div class="card">
-        <img src="{{product.photo}}" alt="{{product.name}}" class="card-img-top" width="500px" height="264px">
+        <img src="{{product.photo}}" alt="{{product.product}}" class="card-img-top" width="500px" height="264px">
         <div class="card-body">
-          <h5 class="card-title">{{product.name}} - {{product.breed}}</h5>
-          <p class="card-text smaller">Product: {{product.gender}} • Size: {{product.age}}</p>
-          <p class="card-text">Price: {{product.price}}</p>
+          <h5 class="card-title">{{product.product}}</h5>
+          <p class="card-text smaller">Product: {{product.Category}} • Size: {{product.Size}}</p>
+          <p class="card-text">Price: {{product.Price}}</p>
           <button class="btn btn-primary buy-button">Buy</button>
         </div>
       </div>
