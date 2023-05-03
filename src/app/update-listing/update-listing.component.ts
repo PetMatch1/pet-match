@@ -36,9 +36,18 @@ export class UpdateListingComponent {
         config.getListings(JSON.stringify(idObject)).subscribe(data => {
           this.listing = JSON.parse(data.body)[0]
           Object.keys(this.listing).forEach(element => {
+            if (element == "isBid"){
+              if (this.listing.isBid){
+                this.swapButton()
+              }
+            }
+            console.log(document.getElementById("gender"))
             let temp: any = this.listing
             let val: string = temp[element]
-            document.getElementById(element)?.setAttribute("value", String(val))
+            let htmlElement:  HTMLInputElement = document.getElementById(element) as HTMLInputElement
+            if (htmlElement != null){
+              htmlElement.value = val
+            }
 
           })
         })
