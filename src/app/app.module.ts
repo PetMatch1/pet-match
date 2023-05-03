@@ -44,7 +44,7 @@ import { UpdateListingComponent } from './update-listing/update-listing.componen
     UpdateListingComponent,
     FilterComponent,
     PetStoreProductsComponent,
-    ProductComponent
+    ProductComponent,
     FilterComponent,
     PetStoreProductsComponent,
     ProductComponent
