@@ -10,6 +10,7 @@ export class NewListingComponent {
   constructor(public auth: AuthService) {}
   buttonText: String = "Sell"
   userId: String | undefined = ""
+  photo: HTMLInputElement = document.getElementById("photo") as HTMLInputElement
   swapButton() {
     if (this.buttonText == "Sell"){
       this.buttonText = "Auction"
@@ -24,6 +25,10 @@ export class NewListingComponent {
         window.location.replace("/search")
       }
       this.userId = user?.sub
+      this.photo = document.getElementById("photo") as HTMLInputElement
     })
+  }
+  changePhoto() {
+    this.photo = document.getElementById("photo") as HTMLInputElement
   }
 }

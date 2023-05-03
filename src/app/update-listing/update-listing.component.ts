@@ -15,6 +15,7 @@ export class UpdateListingComponent {
   buttonText: String = "Sell"
   userId: String | undefined = ""
   listing: Listing = {} as Listing
+  photo: HTMLInputElement = document.getElementById("photo") as HTMLInputElement
   swapButton() {
     if (this.buttonText == "Sell"){
       this.buttonText = "Auction"
@@ -28,6 +29,7 @@ export class UpdateListingComponent {
         window.alert("Please login to create a listing")
       }
       this.userId = user?.sub
+      this.photo = document.getElementById("photo") as HTMLInputElement
       this.route.queryParams.subscribe(params => {
         let idObject = {
           id: [params["id"]]
@@ -54,5 +56,8 @@ export class UpdateListingComponent {
 
     })
     })
+  }
+  changePhoto() {
+    this.photo = document.getElementById("photo") as HTMLInputElement
   }
 }

@@ -3,7 +3,12 @@
     <form action="/.netlify/functions/update_listing">
         <div class="row">
             <div class="col-6">
-                <input type="file" id="photo" name="photo">
+                <div class="container">
+                    <input id="photo" name="photo" placeholder="Image URL" (change)="changePhoto()">
+                    <div class="row">
+                        <img src="{{photo.value}}" alt="Image not found" width="560px" height="476px">
+                    </div>
+                </div>
             </div>
             <div class="col-5">
                 <input class="hidden" name="seller" value="{{userId}}">
