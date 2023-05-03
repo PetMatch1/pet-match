@@ -19,6 +19,10 @@ export class NewListingComponent {
   }
   ngOnInit() {
     this.auth.user$.subscribe(user => {
+      if (user == undefined) {
+        window.alert("Please login to create a listing")
+        window.location.replace("/search")
+      }
       this.userId = user?.sub
     })
   }

@@ -54,7 +54,7 @@
                 </div>
             </div>
             <div *ngIf="this.listing.seller == this.userId">
-                <button class="text-white rounded-3 p-2 admin-button" style="background-color:#003459">EDIT LISTING</button>
+                <a href="/edit-listing?id={{listing._id}}"><button class="text-white rounded-3 p-2 admin-button" style="background-color:#003459">EDIT LISTING</button></a>
                 <button class="text-white rounded-3 p-2 admin-button" style="background-color:red" (click) = "deleteListing()">DELETE LISTING</button>
             </div>
         </div>

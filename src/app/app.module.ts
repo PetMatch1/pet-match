@@ -19,6 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProductComponent } from './product/product.component';
 import { ListingDetailComponent } from './listing-detail/listing-detail.component';
 import { NewListingComponent } from './new-listing/new-listing.component';
+import { UpdateListingComponent } from './update-listing/update-listing.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { NewListingComponent } from './new-listing/new-listing.component';
     FooterComponent,
     ProductComponent,
     ListingDetailComponent,
-    NewListingComponent
+    NewListingComponent,
+    UpdateListingComponent
   ],
   imports: [
     BrowserModule,

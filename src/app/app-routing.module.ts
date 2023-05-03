@@ -7,6 +7,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { RegisterComponent } from './register/register.component';
 import { ListingDetailComponent } from './listing-detail/listing-detail.component';
 import { NewListingComponent } from './new-listing/new-listing.component';
+import { UpdateListingComponent } from './update-listing/update-listing.component';
 
 const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -16,7 +17,8 @@ const routes: Routes = [
     { path: 'profile', component:ProfileComponent},
     { path: 'register', component:RegisterComponent},
     { path: 'listing', component:ListingDetailComponent},
-    {path: 'new-listing', component:NewListingComponent}
+    {path: 'new-listing', component:NewListingComponent},
+    {path: 'edit-listing', component:UpdateListingComponent}
 
   ];
 
