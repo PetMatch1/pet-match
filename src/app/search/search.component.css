@@ -1,3 +1,7 @@
 * {
     background-color: #FDFDFD;
 }
+
+.button {
+    border-radius: 20px; 
+}
