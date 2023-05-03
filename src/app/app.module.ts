@@ -18,6 +18,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FilterComponent } from './filter/filter.component';
 import { PetStoreProductsComponent } from './pet-store-products/pet-store-products.component';
+import { ProductComponent } from './product/product.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { PetStoreProductsComponent } from './pet-store-products/pet-store-produc
     DogFilterComponent,
     FooterComponent,
     FilterComponent,
-    PetStoreProductsComponent
+    PetStoreProductsComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
