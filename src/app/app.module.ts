@@ -16,6 +16,8 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { DogFilterComponent } from './dog-filter/dog-filter.component';
 import { FooterComponent } from './footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FilterComponent } from './filter/filter.component';
+import { PetStoreProductsComponent } from './pet-store-products/pet-store-products.component';
 
 
 @NgModule({
@@ -31,7 +33,9 @@ import { HttpClientModule } from '@angular/common/http';
     LogoutButtonComponent,
     UserProfileComponent,
     DogFilterComponent,
-    FooterComponent
+    FooterComponent,
+    FilterComponent,
+    PetStoreProductsComponent
   ],
   imports: [
     BrowserModule,
