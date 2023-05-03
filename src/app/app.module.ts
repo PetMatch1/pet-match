@@ -16,6 +16,8 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { DogFilterComponent } from './dog-filter/dog-filter.component';
 import { FooterComponent } from './footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FilterComponent } from './filter/filter.component';
+import { PetStoreProductsComponent } from './pet-store-products/pet-store-products.component';
 import { ProductComponent } from './product/product.component';
 import { ListingDetailComponent } from './listing-detail/listing-detail.component';
 import { NewListingComponent } from './new-listing/new-listing.component';
@@ -39,7 +41,13 @@ import { UpdateListingComponent } from './update-listing/update-listing.componen
     ProductComponent,
     ListingDetailComponent,
     NewListingComponent,
-    UpdateListingComponent
+    UpdateListingComponent,
+    FilterComponent,
+    PetStoreProductsComponent,
+    ProductComponent
+    FilterComponent,
+    PetStoreProductsComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
