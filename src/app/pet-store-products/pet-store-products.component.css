@@ -1,6 +1,6 @@
 .products-container {
     width: 500%;
-    max-width: 5000px; 
+    max-width: 5000px; /* adjust this value as needed */
     margin: 0 auto;
   }
   
@@ -19,7 +19,7 @@
   .buy-button {
     position: absolute;
     right: 20px;
-    bottom: 30px;
+    bottom: 15px;
     background-color: #003459;
   color: #fdfdfd;
   padding: 10px 20px;
