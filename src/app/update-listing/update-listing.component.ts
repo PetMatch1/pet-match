@@ -43,7 +43,6 @@ export class UpdateListingComponent {
                 this.swapButton()
               }
             }
-            console.log(document.getElementById("gender"))
             let temp: any = this.listing
             let val: string = temp[element]
             let htmlElement:  HTMLInputElement = document.getElementById(element) as HTMLInputElement
@@ -52,12 +51,28 @@ export class UpdateListingComponent {
             }
 
           })
+          document.getElementById("photoPreview")?.setAttribute("src", this.listing.photo)
         })
 
     })
     })
   }
   changePhoto() {
-    this.photo = document.getElementById("photo") as HTMLInputElement
+    let photo = document.getElementById("photoFile") as HTMLInputElement
+    let photoField = document.getElementById("photo") as HTMLInputElement
+    var reader = new FileReader();
+    if (photo.files == null){
+      return
+    }
+    let file: any = photo.files[0]
+    reader.readAsDataURL(file);
+    reader.onload = function (e) {
+      photoField.value = reader.result as string
+      document.getElementById("photoPreview")?.setAttribute("src", reader.result as string)
+    }
+    reader.onerror = function (e) {
+      console.log("error")
+      return
+    }
   }
 }

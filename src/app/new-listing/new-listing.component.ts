@@ -38,7 +38,7 @@ export class NewListingComponent {
     reader.readAsDataURL(file);
     reader.onload = function (e) {
       photoField.value = reader.result as string
-      return reader.result
+      document.getElementById("photoPreview")?.setAttribute("src", reader.result as string)
     }
     reader.onerror = function (e) {
       console.log("error")
