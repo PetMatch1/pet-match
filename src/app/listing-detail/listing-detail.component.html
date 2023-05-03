@@ -1,0 +1,62 @@
+<app-toolbar></app-toolbar>
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <img src="{{this.listing.photo}}" alt="{{this.listing.name}}" width="560px" height="476px">
+        </div>
+        <div class="col-5">
+            <h1>{{this.listing.name}}</h1>
+            <h2>{{this.listing.breed}}</h2>
+            <h2>Cost: {{this.listing.price}}</h2>
+            <button class="text-white rounded-3 p-2 listing-button" style="background-color:#003459;" type="submit">Contact us</button>
+            <br>
+            <button class="text-white rounded-3 p-2 listing-button" style="background-color:#003459;" type="submit" (click)="buy(this.listing)">{{auctionOrBuy(this.listing)}}</button>
+            <div class="container adj-list" style="color:gray;">
+                <div class="row">
+                    <div class="col">
+                        Gender
+                    </div>
+                    <div class="col">
+                        {{this.listing.gender}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        Age
+                    </div>
+                    <div class="col">
+                        {{this.listing.age}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        Size
+                    </div>
+                    <div class="col">
+                        {{this.listing.breed_size}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        Color
+                    </div>
+                    <div class="col">
+                        {{this.listing.color}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        Published Date
+                    </div>
+                    <div class="col">
+                        {{formatDate(this.listing.startDate)}}
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="this.listing.seller == this.userId">
+                <a href="/edit-listing?id={{listing._id}}"><button class="text-white rounded-3 p-2 admin-button" style="background-color:#003459">EDIT LISTING</button></a>
+                <button class="text-white rounded-3 p-2 admin-button" style="background-color:red" (click) = "deleteListing()">DELETE LISTING</button>
+            </div>
+        </div>
+    </div>
+</div>

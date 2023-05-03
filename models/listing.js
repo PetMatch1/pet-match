@@ -1,11 +1,7 @@
 var mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const listingSchema = new Schema({
-    seller: {
-        type: Schema.Types.ObjectId,
-        ref: "User",
-        required: true,
-    },
+    seller: {type: String, required: true},
     price: {type: Number, required: true},
     name: {type:String, required: true},
     age: {type: Number, required: true},

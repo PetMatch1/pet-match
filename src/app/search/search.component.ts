@@ -4,6 +4,7 @@ import { Location } from '../datatypes';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { HttpClientModule } from '@angular/common/http';
 import { ConfigService } from '../config.service';
+import { AuthService } from '@auth0/auth0-angular';
 
 @Component({
   selector: 'app-search',
@@ -12,9 +13,10 @@ import { ConfigService } from '../config.service';
 })
 
 export class SearchComponent {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private auth: AuthService) {}
   Dogs: any = {}
   Listings: Listing[] = []
+  isUser: boolean = false
   ngOnInit() {
     let config = new ConfigService(this.http);
     config.getListings("{}").subscribe(data => {
@@ -25,6 +27,11 @@ export class SearchComponent {
         }
       }
     });
+    this.auth.isAuthenticated$.subscribe(data => {
+      if (data){
+        this.isUser = true
+      }
+    })
   }
   newFilter(options: string){
     let config = new ConfigService(this.http);

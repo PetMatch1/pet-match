@@ -36,20 +36,21 @@ const handler = async (event) => {
     };
     var response;
     await Listing.create(listing_detail).then(async function(listing) {
-        const doc = await User.findById(listing.seller);
-        doc.listings.push(listing._id);
-        return doc.save();
+        return listing.save();
     })
     .then(function(user) {
         response = {
-            statusCode: 200,
-            body: `Listing Added\nListing Added to User ID: ${user._id}`
+            statusCode: 302,
+            body: `Listing Added\nListing Added to User ID: ${user._id}`,
+            headers: {
+                "Location": "../../listing?id=" + user._id.toString()
+            }
         };
     })
     .catch(function(err) {
         response = {
-            statusCode: 500,
-            body: err.toString()
+            statusCode: 302,
+            body: err.toString(),
         };
     });
     return response;
