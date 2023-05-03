@@ -10,7 +10,7 @@ export class NewListingComponent {
   constructor(public auth: AuthService) {}
   buttonText: String = "Sell"
   userId: String | undefined = ""
-  photo: HTMLInputElement = document.getElementById("photo") as HTMLInputElement
+  photoId: String = ""
   swapButton() {
     if (this.buttonText == "Sell"){
       this.buttonText = "Auction"
@@ -25,10 +25,24 @@ export class NewListingComponent {
         window.location.replace("/search")
       }
       this.userId = user?.sub
-      this.photo = document.getElementById("photo") as HTMLInputElement
     })
   }
   changePhoto() {
-    this.photo = document.getElementById("photo") as HTMLInputElement
+    let photo = document.getElementById("photo") as HTMLInputElement
+    let photoField = document.getElementById("photoField") as HTMLInputElement
+    var reader = new FileReader();
+    if (photo.files == null){
+      return
+    }
+    let file: any = photo.files[0]
+    reader.readAsDataURL(file);
+    reader.onload = function (e) {
+      photoField.value = reader.result as string
+      return reader.result
+    }
+    reader.onerror = function (e) {
+      console.log("error")
+      return
+    }
   }
 }

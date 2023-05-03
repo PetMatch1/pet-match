@@ -4,10 +4,9 @@
         <div class="row">
             <div class="col-6">
                 <div class="container">
-                    <input id="photo" name="photo" placeholder="Image URL" (change)="changePhoto()">
-                    <div class="row">
-                        <img src="{{photo.value}}" alt="Image not found" width="560px" height="476px">
-                    </div>
+                    <input class="hidden" id="photoField" name="photo">
+                    <input id="photo" type="file" (change)="changePhoto()">
+                    <img src="{{photoId}}" alt="Image not found" width="560px" height="476px">
                 </div>
             </div>
             <div class="col-5">
