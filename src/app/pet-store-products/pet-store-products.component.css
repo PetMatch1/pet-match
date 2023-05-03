@@ -1,6 +1,6 @@
 .products-container {
     width: 500%;
-    max-width: 5000px; /* adjust this value as needed */
+    max-width: 5000px; 
     margin: 0 auto;
   }
   
@@ -13,7 +13,7 @@
   }
   
   .products-container li {
-    width: calc(33.33% + 100px); /* adjust this value as needed */
+    width: calc(33.33% + 100px); 
     margin-bottom: 30px;
   }
   .buy-button {

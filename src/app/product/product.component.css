@@ -1,4 +1,18 @@
-a {
-    color: black;
-    text-decoration: none;
+.products-container {
+  width: 500%;
+  max-width: 5000px; 
+  margin: 0 auto;
+}
+
+.products-container ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.products-container li {
+  width: calc(33.33% + 100px); 
+  margin-bottom: 30px;
 }
