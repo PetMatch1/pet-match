@@ -26,4 +26,15 @@ export class ConfigService {
     let url: string = location.origin + '/.netlify/functions/delete_listing?id=' + id
     return this.http.get<getResponse>(url)
   }
+  public getProducts(options: string) {
+    let optionsParsed = JSON.parse(options)
+    let Listings: Listing[];
+    let url: string = location.origin + '/.netlify/functions/get_products?'
+    Object.keys(optionsParsed).forEach(function(element: any){
+      optionsParsed[element].forEach(function(value: any){
+        url += element + "=" + value + "&"
+        })
+    });
+    return this.http.get<getResponse>(url)
+  }
 }
