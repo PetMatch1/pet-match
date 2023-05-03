@@ -10,6 +10,6 @@ export class PetStoreProductsComponent {
   @Input() products: Product[] = [];
 
   purchaseProduct(product: any) {
-    window.alert(`You have purchased ${product.name} for ${product.price}.`);
+    window.alert(`You have purchased ${product.product} for ${product.Price}.`);
   }
 }

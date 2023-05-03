@@ -5,7 +5,8 @@
             <app-dog-filter (newItemEvent)="newFilter($event)"></app-dog-filter>
         </div>
         <div class="col-2">
-            <a *ngIf="isUser" href="/new-listing"><button class="text-white rounded-3 p-2 listing-button" style="background-color:#003459;">Create Listing</button></a>
+            <a *ngIf="isUser" href="/new-listing"><button class="text-white rounded-pill p-2 listing-button float-right" style="background-color:#003459;">Create Listing</button>
+            </a>
             <app-product-view  [products]='Listings'></app-product-view>
         </div>
     </div>
