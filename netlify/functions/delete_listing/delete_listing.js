@@ -4,6 +4,7 @@ const handler = async (event) => {
     var mongoose = require('mongoose');
     mongoose.set("strictQuery", false);
     const dbURI = process.env.API_KEY;
+    console.log(event)
     try {
         await mongoose.connect(dbURI);
     } catch (err) {
@@ -14,8 +15,11 @@ const handler = async (event) => {
     var id = formData.get("id");
     if(formData.get("id") == null) {
         response = {
-            statusCode: 500,
-            body: "No ID Provided"
+            statusCode: 302,
+            body: "No ID Provided",
+            headers: {
+                "Location": "../../search"
+            }
         }
         return response;
     } else {
@@ -23,19 +27,24 @@ const handler = async (event) => {
         await Listing.findByIdAndDelete(id)
         .exec().then(function(listing) {
             response = {
-                statusCode: 200,
-                body: `Listing Deleted\nListing Deleted: ${listing._id}`
+                statusCode: 302,
+                body: `Listing Deleted\nListing Deleted: ${listing._id}`,
+                headers: {
+                    "Location": "../../search"
+                }
             }
         })
         .catch(function(err) {
             response = {
-                statusCode: 500,
-                body: err.toString()
+                statusCode: 302,
+                body: err.toString(),
+                headers: {
+                    "Location": "../../search"
+                }
             };
-            return response;
         });
     }
-    return response;
+    return response
 }
 
 module.exports = { handler }

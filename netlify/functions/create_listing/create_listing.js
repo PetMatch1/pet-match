@@ -40,14 +40,17 @@ const handler = async (event) => {
     })
     .then(function(user) {
         response = {
-            statusCode: 200,
-            body: `Listing Added\nListing Added to User ID: ${user._id}`
+            statusCode: 302,
+            body: `Listing Added\nListing Added to User ID: ${user._id}`,
+            headers: {
+                "Location": "../../listing?id=" + user._id.toString()
+            }
         };
     })
     .catch(function(err) {
         response = {
-            statusCode: 500,
-            body: err.toString()
+            statusCode: 302,
+            body: err.toString(),
         };
     });
     return response;

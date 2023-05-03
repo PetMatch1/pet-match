@@ -4,3 +4,9 @@
 .listing-button {
     font-size: 200%
 }
+.admin-button {
+    border: none;
+  border-radius: 20px;
+  margin-left: 6%;
+  margin-right: 6%
+}

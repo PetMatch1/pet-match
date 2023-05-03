@@ -3,6 +3,7 @@ import { Component, Input } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { ConfigService } from '../config.service';
 import { Listing } from '../datatypes';
+import { AuthService } from '@auth0/auth0-angular';
 
 @Component({
   selector: 'app-listing-detail',
@@ -10,7 +11,8 @@ import { Listing } from '../datatypes';
   styleUrls: ['./listing-detail.component.css']
 })
 export class ListingDetailComponent {
-  constructor(private route: ActivatedRoute, private http: HttpClient){}
+  constructor(private route: ActivatedRoute, private http: HttpClient, private auth: AuthService){}
+  userId: String | undefined = ""
   listing: Listing = {
     _id: '',
     seller: '',
@@ -44,6 +46,11 @@ export class ListingDetailComponent {
   buy (listing: Listing){
     window.alert(`You have purchased ${listing.name} for $${listing.price}!`)
   }
+  deleteListing() {
+    if (window.confirm("Are you sure?")){
+      window.location.replace("/.netlify/functions/delete_listing?id=" + this.listing._id)
+    }
+  }
   ngOnInit() {
     this.route.queryParams.subscribe(params => {
         let idObject = {
@@ -55,6 +62,9 @@ export class ListingDetailComponent {
           console.log(this.listing)
         })
 
+    })
+    this.auth.user$.subscribe(user => {
+      this.userId = user?.sub
     })
   }
 }
