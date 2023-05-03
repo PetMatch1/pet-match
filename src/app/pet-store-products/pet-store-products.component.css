@@ -1,0 +1,30 @@
+.products-container {
+    width: 500%;
+    max-width: 5000px; /* adjust this value as needed */
+    margin: 0 auto;
+  }
+  
+  .products-container ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .products-container li {
+    width: calc(33.33% + 100px); /* adjust this value as needed */
+    margin-bottom: 30px;
+  }
+  .buy-button {
+    position: absolute;
+    right: 20px;
+    bottom: 30px;
+    background-color: #003459;
+  color: #fdfdfd;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight:normal;
+  }

@@ -1,0 +1,52 @@
+.container1 {
+    margin-top: 40px;
+    position: relative;
+    width: 100%; /* make the container full width */
+    max-width: 1200px; /* set a max-width to prevent the container from becoming too wide */
+    margin: 0 auto;
+  }
+  .container1 button {
+    background-color: #ffffff;
+    color: #003459;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-weight: normal;
+  }
+  .text-container {
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-0%, -50%);
+    text-align: center;
+    color: white;
+  }
+  
+  .text-container h1 {
+    font-size: 55px;
+    font-weight: bold;
+    margin: 0;
+    color: #ffffff;
+  
+  }
+  
+  .text-container h2 {
+    font-size: 37px;
+    margin: 20px 0;
+    color: #ffffff;
+  
+  }
+  
+  .text-container p {
+    font-size: 15px;
+    line-height: 1.5;
+    max-width: 400px;
+    margin: 0 auto;
+    color: #ffffff;
+  }
+  
+  .container2 {
+    margin-top: 40px;
+  }
