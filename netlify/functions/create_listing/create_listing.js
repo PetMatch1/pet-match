@@ -32,7 +32,8 @@ const handler = async (event) => {
         startDate: start,
         endDate: formData.get("endDate"),
         traitList: formData.getAll("traitList") || [null],
-        zipcode: formData.get("zipCode")
+        zipcode: formData.get("zipCode"),
+        photo: formData.get("photo"),
     };
     var response;
     await Listing.create(listing_detail).then(async function(listing) {

@@ -15,6 +15,7 @@ export class UpdateListingComponent {
   buttonText: String = "Sell"
   userId: String | undefined = ""
   listing: Listing = {} as Listing
+  photo: HTMLInputElement = document.getElementById("photo") as HTMLInputElement
   swapButton() {
     if (this.buttonText == "Sell"){
       this.buttonText = "Auction"
@@ -28,6 +29,7 @@ export class UpdateListingComponent {
         window.alert("Please login to create a listing")
       }
       this.userId = user?.sub
+      this.photo = document.getElementById("photo") as HTMLInputElement
       this.route.queryParams.subscribe(params => {
         let idObject = {
           id: [params["id"]]
@@ -41,7 +43,6 @@ export class UpdateListingComponent {
                 this.swapButton()
               }
             }
-            console.log(document.getElementById("gender"))
             let temp: any = this.listing
             let val: string = temp[element]
             let htmlElement:  HTMLInputElement = document.getElementById(element) as HTMLInputElement
@@ -50,9 +51,28 @@ export class UpdateListingComponent {
             }
 
           })
+          document.getElementById("photoPreview")?.setAttribute("src", this.listing.photo)
         })
 
     })
     })
+  }
+  changePhoto() {
+    let photo = document.getElementById("photoFile") as HTMLInputElement
+    let photoField = document.getElementById("photo") as HTMLInputElement
+    var reader = new FileReader();
+    if (photo.files == null){
+      return
+    }
+    let file: any = photo.files[0]
+    reader.readAsDataURL(file);
+    reader.onload = function (e) {
+      photoField.value = reader.result as string
+      document.getElementById("photoPreview")?.setAttribute("src", reader.result as string)
+    }
+    reader.onerror = function (e) {
+      console.log("error")
+      return
+    }
   }
 }

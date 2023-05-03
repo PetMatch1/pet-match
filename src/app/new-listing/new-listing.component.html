@@ -3,18 +3,23 @@
     <form action="/.netlify/functions/create_listing">
         <div class="row">
             <div class="col-6">
-                <input type="file" id="photo" name="photo">
+                <div class="container">
+                    <input class="hidden" id="photoField" name="photo">
+                    <input id="photo" type="file" (change)="changePhoto()">
+                    <img id="photoPreview" alt="Image not found" width="560px" height="476px">
+                </div>
             </div>
             <div class="col-5">
                 <input class="hidden" name="seller" value="{{userId}}">
                 <input class="h1" id="name" name="name" placeholder="Name">
                 <input class="h2" id="breed" name="breed" placeholder="Breed">
                 <input class="h2" type="number" id="price" name="price" placeholder="Price">
-                <br>
-                <label for="isBid" class="h2">
-                    <button type="button" class="text-white rounded-3 p-2 listing-button" (click) = "swapButton()" style="background-color:#003459;">{{buttonText}}</button>
-                </label>
-                <input type="checkbox" id="isBid" name="isBid" class="hidden">
+                <div class="row">
+                    <label for="isBid" class="h2">
+                        <button type="button" class="text-white rounded-3 p-2 listing-button" (click) = "swapButton()" style="background-color:#003459;">{{buttonText}}</button>
+                    </label>
+                    <input type="checkbox" id="isBid" name="isBid" class="hidden">
+                </div>
                 <div class="container adj-list" style="color:gray;">
                     <div class="row">
                         <div class="col">

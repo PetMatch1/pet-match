@@ -64,6 +64,9 @@ const handler = async (event) => {
     if (formData.get("zipCode") != null) {
         listing_detail.zipCode = formData.get("zipCode");
     }
+    if (formData.get("photo") != null) {
+        listing_detail.photo = formData.get("photo");
+    }
     var response;
     await Listing.findByIdAndUpdate(id, listing_detail).then(async function(listing) {
         return listing.save()

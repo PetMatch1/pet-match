@@ -31,6 +31,7 @@ const listingSchema = new Schema({
         default: []    
     },
     zipcode: {type: Number},
+    photo: {type: String},
 });
 
 listingSchema.virtual("url").get(function () {
