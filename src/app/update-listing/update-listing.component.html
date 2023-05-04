@@ -4,9 +4,11 @@
         <div class="row">
             <div class="col-6">
                 <div class="container">
+                    <div class="card clickable-card">
                     <input class="hidden" id="photo" name="photo">
                     <input id="photoFile" type="file" (change)="changePhoto()">
                     <img id="photoPreview" alt="Image not found" width="560px" height="476px">
+                </div>
                 </div>
             </div>
             <div class="col-5">
@@ -16,7 +18,7 @@
                 <input #breed class="h2" id="breed" name="breed" placeholder="Breed">
                 <input #price class="h2" type="number" id="price" name="price" placeholder="Price">
                 <br>
-                <label for="isBid" class="h2">
+                <label for="isBid" class="h5">
                     <button type="button" class="text-white rounded-3 p-2 listing-button" (click) = "swapButton()" style="background-color:#003459;">{{buttonText}}</button>
                 </label>
                 <input #isBid type="checkbox" id="isBid" name="isBid" class="hidden">

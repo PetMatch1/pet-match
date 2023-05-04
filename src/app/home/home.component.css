@@ -4,21 +4,62 @@
   }
 
 .container {
-    position: relative;
+    position:relative;
     background-image: url(../../assets/background/TopHome.png);
-    height: 100vh;
-    width:4000px;
+    height: 1000px;;
+    width:100%;
     background-repeat: no-repeat;
-    background-size:auto;
+    margin-bottom: 10px;
 }
 .container2 {
-    background-image: url(../../assets/background/BreedHome.resized.png);
-    height: 60vh;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-position:top;
-    margin-top: -350px;
-    background-size:auto;
+  position: relative; 
+  margin-bottom: 250px;
+  margin-left:60px;
+  margin-top: -200px;
+}
+.container2 button {
+  background-color: #ffffff;
+  color: #003459;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-weight: normal;
+}
+.text-containers {
+  position: absolute;
+  top: 50%;
+  left: 53%;
+  transform: translate(-0%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.text-containers h1 {
+  font-size: 55px;
+  font-weight: bold;
+  margin: 0;
+  color: #fcfcfc;
+
+}
+
+.text-containers h2 {
+  font-size: 37px;
+  margin: 20px 0;
+  color: #ffffff;
+
+}
+
+.text-containers p {
+  font-size: 15px;
+  line-height: 1.5;
+  max-width: 500px;
+  margin: 0 auto;
+  color: #ffffff;
+}
+.container2 .pt-5 {
+  margin-top: 80px;
 }
 .container3 {
   background-color: #ffffff;
@@ -84,7 +125,7 @@ ul {
   border: 2px solid #007bff;
 }
 .container4 {
-  position: relative; /* Set the container to relative positioning */
+  position: relative; 
 }
 
 .text-container {

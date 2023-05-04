@@ -1,12 +1,73 @@
-.adj-list {
-    font-size: 150%
-}
-.listing-button {
-    font-size: 200%
-}
-.admin-button {
+.container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+  
+  .col-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  
+  .col-5 {
+    flex: 0 0 41.666667%;
+    max-width: 41.666667%;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+
+  .listing-button {
+    margin-top: 20px;
     border: none;
-  border-radius: 20px;
-  margin-left: 6%;
-  margin-right: 6%
-}
+    outline: none;
+    cursor: pointer;
+  }
+  
+  .admin-button {
+    margin-top: 20px;
+    margin-right: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  .adj-list {
+    margin-top: 20px;
+  }
+  
+  .adj-list .row {
+    margin-bottom: 10px;
+  }
+  
+  .adj-list .col {
+    font-size: 18px;
+    font-weight: bold;
+  }
