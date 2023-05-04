@@ -4,7 +4,7 @@
         <img src="{{product.photo}}" alt="{{product.product}}" class="card-img-top" width="500px" height="264px">
         <div class="card-body">
             <h5 class="card-title">{{product.product}}</h5>
-            <p class="card-text smaller">Product: {{product.Category}} • Size: {{product.Size}}</p>
+            <p class="card-text smaller">Category: {{product.Category}} • Size: {{product.Size}}</p>
             <p class="card-text">Price: {{product.Price}}</p>
             <button class="btn btn-primary buy-button" (click)="purchaseProduct(product)">Buy</button>
         </div>
